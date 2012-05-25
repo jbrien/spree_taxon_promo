@@ -9,3 +9,4 @@ dump.rdb
 public/spree/
 public/assets/
 .rbenv-version
+spec/dummy
