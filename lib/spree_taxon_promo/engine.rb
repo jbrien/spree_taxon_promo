@@ -1,3 +1,5 @@
+require 'spree_promo'
+
 module SpreeTaxonPromo
   class Engine < Rails::Engine
     engine_name 'spree_taxon_promo'
