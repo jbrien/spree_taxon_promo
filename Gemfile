@@ -1,9 +1,15 @@
 source 'http://rubygems.org'
 
-if RUBY_VERSION < '1.9'
-  gem 'ruby-debug'
-else
-  gem 'ruby-debug19'
+gem 'json'
+gem 'sqlite3'
+gem 'mysql2'
+gem 'pg'
+gem 'multi_json', "1.2.0"
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "~> 3.2"
+  gem 'coffee-rails', "~> 3.2"
 end
 
 group :test do
@@ -20,5 +26,13 @@ group :test do
   gem 'database_cleaner', '0.7.1'
   gem 'launchy'  
 end
+
+# platform :ruby_18 do
+#   gem "ruby-debug"
+# end
+
+# platform :ruby_19 do
+#   gem "ruby-debug19"
+# end
 
 gemspec
