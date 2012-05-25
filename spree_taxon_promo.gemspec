@@ -12,8 +12,10 @@ Gem::Specification.new do |s|
   s.email     = 'gregr@rassoc.com'
   s.homepage  = 'http://www.rassoc.com'
 
+  s.files        = Dir['LICENSE', 'README.md', 'app/**/*', 'config/**/*', 'lib/**/*', 'db/**/*', 'vendor/**/*']
   s.require_path = 'lib'
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 1.1.0'
+  s.add_dependency 'spree_promo', '~> 1.1.0'
 end
