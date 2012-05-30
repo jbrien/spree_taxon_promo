@@ -1,0 +1,17 @@
+<p class="field">
+  <label for="<%= "#{param_prefix}_preferred_amount" %>">
+    <%= t('promotion_rule_types.product_in_taxon_count.description') %>
+    <%= select_tag "#{param_prefix}[preferred_operator]", options_for_select(Spree::Promotion::Rules::ProductInTaxonCount::OPERATORS.map{|o| [t("product_in_taxon_count.operators.#{o}"),o]}, promotion_rule.preferred_operator) %>
+    <%= text_field_tag "#{param_prefix}[preferred_amount]", promotion_rule.preferred_amount, :size => 10 %>
+  </label>
+
+  <label for="<%= "#{param_prefix}_preferred_taxon" %>">
+    <%= "Taxon" %>
+    <%= text_field_tag "#{param_prefix}[preferred_taxon]", promotion_rule.preferred_taxon, :size => 20 %>
+  </label>
+
+  <label for="<%= "#{param_prefix}_preferred_count" %>">
+    <%= "Count" %>
+    <%= text_field_tag "#{param_prefix}[preferred_count]", promotion_rule.preferred_count, :size => 10 %>
+  </label>
+</p>

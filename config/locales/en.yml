@@ -7,4 +7,8 @@ en:
     product_buy_taxon_total:
       name: Item total from taxon
       description: Order total from specific taxon exceeds amount
+    product_in_taxon_count:
+      name: Item count from taxon
+      description: Number of items from specific taxon exceeds amount
   flat_percent_taxon: Flat percent of taxon total
+  flat_percent_nth_taxon_item: Flat percent of the nth item belonging to taxon

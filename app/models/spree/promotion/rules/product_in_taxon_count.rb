@@ -6,6 +6,10 @@ module Spree
         preference :taxon, :string, :default => ''
         preference :operator, :string, :default => 'gt'
 
+        attr_accessible :preferred_count, :preferred_operator, :preferred_taxon
+
+        OPERATORS = ['gt', 'gte']
+
         def eligible?(order, options = {})
           count = 0
           order.line_items.each do |line_item|

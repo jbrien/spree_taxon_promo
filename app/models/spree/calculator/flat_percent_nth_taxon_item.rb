@@ -2,7 +2,13 @@ module Spree
   class Calculator::FlatPercentNthTaxonItem < Calculator
     preference :nth_item, :integer, :default => 2
     preference :taxon, :string, :default => ''
-    preference :flat_percent, :decimal => 0.00
+    preference :flat_percent, :decimal, :default => 0.00
+
+    attr_accessible :preferred_nth_item, :preferred_flat_percent, :preferred_taxon
+
+    def self.description
+      I18n.t(:flat_percent_nth_taxon_item)
+    end
 
     def compute(order)
       result = 0.00
